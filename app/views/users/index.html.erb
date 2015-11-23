@@ -9,10 +9,6 @@
       <td>email</td>
       <td>Action</td>
     </tr>
-    NOTE : the @users object in our index action is array of hash, which is generated 
-    when be passed return data to JSON.parse method. If you handled data in some other
-    way, modify the code below accordingly. say for xml data you have to use something like
-    u.xpath("id").text instead of u[:id]
     <%@users.each do |u|%>
     <tr>
       <td><%=u[:id]%></td>
