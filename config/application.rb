@@ -21,6 +21,13 @@ module ApiConsumer
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+
+
+    config.generators do |g|
+      g.test_framework   :rspec, :fixture => true, :views => false
+      g.integration_tool :rspec, :fixture => true, :views => true
+    end
+    
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
